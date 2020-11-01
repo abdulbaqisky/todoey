@@ -8,7 +8,11 @@ class TasksList extends StatefulWidget {
 }
 
 class _TasksListState extends State<TasksList> {
-  List<Task> tasks = [];
+  List<Task> tasks = [
+    Task(name: 'buy Milk'),
+    Task(name: 'buy bread'),
+    Task(name: 'buy tea'),
+  ];
 
   @override
   Widget build(BuildContext context) {
