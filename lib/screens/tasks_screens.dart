@@ -30,6 +30,7 @@ class _TaskScreenState extends State<TaskScreen> {
                     tasks.add(Task(name: newTaskTitle));
                   },
                 );
+                Navigator.pop(context);
               },
             ),
           );
@@ -67,7 +68,7 @@ class _TaskScreenState extends State<TaskScreen> {
                   ),
                 ),
                 Text(
-                  '12 Tasks',
+                  '${tasks.length} Tasks',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
