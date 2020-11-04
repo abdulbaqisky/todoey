@@ -38,10 +38,10 @@ class AddTaskScreen extends StatelessWidget {
               },
             ),
             FlatButton(
-              color: Colors.lightBlueAccent,
               onPressed: () {
-                Provider.of<TaskData>(context).addTask(newTaskTitle);
                 Navigator.pop(context);
+                Provider.of<TaskData>(context, listen: false)
+                    .addTask(newTaskTitle);
               },
               child: Text(
                 'Add',
@@ -49,6 +49,7 @@ class AddTaskScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+              color: Colors.lightBlueAccent,
             ),
           ])),
     );

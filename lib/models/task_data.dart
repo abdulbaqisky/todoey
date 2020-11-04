@@ -10,7 +10,7 @@ class TaskData extends ChangeNotifier {
   ];
 
   UnmodifiableListView<Task> get tasks {
-    return _tasks;
+    return UnmodifiableListView(_tasks);
   }
 
   int get taskCount {
